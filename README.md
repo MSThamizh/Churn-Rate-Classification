@@ -44,4 +44,9 @@ This project aims to predict customer churn using machine learning classificatio
 ## Technologies Used
 
 - **Languages**: Python  
-- **Libraries**: Pandas, Scikit-learn  
+- **Libraries**: Pandas, Scikit-learn
+
+## References
+
+- **Python**: [https://docs.python.org/3/](https://docs.python.org/3/)
+- **Scikit-learn Documentation**: [https://scikit-learn.org/stable/](https://scikit-learn.org/stable/)
