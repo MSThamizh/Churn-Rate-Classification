@@ -43,15 +43,13 @@ The goal of this project is to build a machine learning model that predicts whet
 - **Python**: Main programming language for data processing and machine learning model development.
 - **Scikit-learn**: For building and evaluating machine learning models.
 - **Pandas**: For data manipulation and cleaning.
-- **Numpy**: For numerical operations and transformations.
-- **Matplotlib/Seaborn**: For data visualization and feature analysis.
 
 ## Results
 
 ### Model Performance:
 
 | Model                     | Accuracy       | Precision (0) | Recall (0) | F1-Score (0) | Precision (1) | Recall (1) | F1-Score (1) | F1-Score (Macro Avg) |
-|---------------------------|----------------|---------------|------------|--------------|---------------|------------|--------------|----------------------|---------|
+|---------------------------|----------------|---------------|------------|--------------|---------------|------------|--------------|----------------------|
 | **Logistic Regression**    | 0.65           | 0.68          | 0.76       | 0.72         | 0.59          | 0.48       | 0.53         | 0.62                 |
 | **Random Forest Classifier**| 0.70           | 0.73          | 0.79       | 0.76         | 0.66          | 0.58       | 0.62         | 0.69                 |
 
