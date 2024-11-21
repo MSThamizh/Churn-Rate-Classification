@@ -20,7 +20,7 @@ The goal of this project is to build a machine learning model that predicts whet
    - Train multiple classification models such as **Logistic Regression**, **Random Forest**, **Support Vector Machines (SVM)**, and **Gradient Boosting**.
    - Apply hyperparameter tuning to optimize model performance.
 5. **Model Evaluation**:
-   - Evaluate models using classification metrics such as **Accuracy**, **Precision**, **Recall**, **F1-Score**, and **ROC-AUC**.
+   - Evaluate models using classification metrics such as **Accuracy**, **Precision**, **Recall**, and **F1-Score**.
 6. **Prediction**:
    - The model predicts the likelihood of customer churn based on input features.
 
