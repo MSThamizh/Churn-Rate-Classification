@@ -1,50 +1,61 @@
 # Churn Rate Classification
 
-## Overview
+This project aims to predict customer churn using machine learning classification techniques. By classifying whether a customer is likely to churn or not, businesses can take proactive measures to retain their customers. The project utilizes historical customer data and various features like demographics, usage patterns, and customer interaction metrics.
 
-This project aims to predict customer churn using machine learning classification techniques. By preprocessing the data, handling class imbalance, and employing multiple classification algorithms, the project demonstrates an end-to-end solution for churn prediction. Key performance metrics such as accuracy and classification reports are used to evaluate the models.
+## Problem Statement
 
-## Features
-
-- **Data Preprocessing**:  
-  - Handled missing values by removing unnecessary columns and rows with null values.
-  - Performed one-hot encoding for categorical attributes.
-  - Standardized feature values to improve model performance.
-
-- **Class Imbalance Handling**:  
-  - Resampled the data to address class imbalance, ensuring better model training.
-
-- **Machine Learning Models**:  
-  - **Logistic Regression**: Evaluated using accuracy and classification metrics.  
-  - **Random Forest Classifier**: Applied ensemble learning for improved performance.
-
-- **Evaluation Metrics**:  
-  - **Accuracy**: Measures the overall performance of the model.  
-  - **Classification Report**: Includes precision, recall, F1-score, and support for both classes.
+The goal of this project is to build a machine learning model that predicts whether a customer will churn (leave the service) based on various customer features. Churn prediction is essential for businesses to identify at-risk customers and reduce churn rates by offering targeted interventions.
 
 ## Workflow
 
-1. **Data Loading and Cleaning**:  
-   - Read the dataset and removed columns with excessive null values (`credit_score`, `rewards_earned`).
-   - Removed irrelevant columns (`app_web_user`, `user`).
+1. **Data Collection**: The dataset contains historical customer data, including demographic details, service usage, and interaction history.
+2. **Data Preprocessing**:
+   - Handle missing values using mean/median imputation.
+   - Encode categorical variables using techniques like one-hot encoding or label encoding.
+   - Normalize continuous features for better model performance.
+3. **Feature Engineering**:
+   - Create new features (if applicable) to enhance model prediction.
+   - Remove highly correlated features to prevent multicollinearity.
+4. **Model Training**:
+   - Train multiple classification models such as **Logistic Regression**, **Random Forest**, **Support Vector Machines (SVM)**, and **Gradient Boosting**.
+   - Apply hyperparameter tuning to optimize model performance.
+5. **Model Evaluation**:
+   - Evaluate models using classification metrics such as **Accuracy**, **Precision**, **Recall**, **F1-Score**, and **ROC-AUC**.
+6. **Prediction**:
+   - The model predicts the likelihood of customer churn based on input features.
 
-2. **Encoding**:  
-   - Applied one-hot encoding to categorical attributes.
+## Features
 
-3. **Handling Class Imbalance**:  
-   - Used `sklearn.utils.resample` to downsample the majority class.
-
-4. **Feature Scaling**:  
-   - Standardized features using `StandardScaler`.
-
-5. **Model Training**:  
-   - Trained Logistic Regression and Random Forest models.  
-   - Evaluated models on the test set using performance metrics.
-
+- **Data Preprocessing**: 
+  - Fill missing values with statistical methods (mean, median).
+  - Encode categorical variables for machine learning models.
+  - Standardize continuous features to improve model performance.
+  
+- **Model Training & Evaluation**:
+  - Multiple machine learning classifiers trained and compared.
+  - Hyperparameter optimization via grid search or random search.
+  
+- **Prediction**: 
+  - The model predicts whether a customer will churn based on their features.
+  
 ## Technologies Used
 
-- **Languages**: Python  
-- **Libraries**: Pandas, Scikit-learn
+- **Python**: Main programming language for data processing and machine learning model development.
+- **Scikit-learn**: For building and evaluating machine learning models.
+- **Pandas**: For data manipulation and cleaning.
+- **Numpy**: For numerical operations and transformations.
+- **Matplotlib/Seaborn**: For data visualization and feature analysis.
+
+## Results
+
+### Model Performance:
+
+| Model                     | Accuracy       | Precision (0) | Recall (0) | F1-Score (0) | Precision (1) | Recall (1) | F1-Score (1) | F1-Score (Macro Avg) |
+|---------------------------|----------------|---------------|------------|--------------|---------------|------------|--------------|----------------------|---------|
+| **Logistic Regression**    | 0.65           | 0.68          | 0.76       | 0.72         | 0.59          | 0.48       | 0.53         | 0.62                 |
+| **Random Forest Classifier**| 0.70           | 0.73          | 0.79       | 0.76         | 0.66          | 0.58       | 0.62         | 0.69                 |
+
+The **Random Forest Classifier** outperformed the **Logistic Regression** model with a higher accuracy and better F1-scores for both classes. However, both models showed good performance, with Random Forest being more effective at predicting churn.
 
 ## References
 
